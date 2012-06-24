@@ -13,3 +13,13 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+
+$(function () {
+  $('#photos').bxSlider({
+    auto: true,
+    prevText: '',
+    nextText: ''
+    // pause: 15000
+  });
+});
