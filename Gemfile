@@ -4,6 +4,7 @@ gem 'rails', '3.2.6'
 
 gem 'pg'
 gem 'thin'
+gem 'omniauth-facebook'
 
 # Gems used only for assets and not required
 # in production environments by default.

@@ -139,21 +139,10 @@ h1, h2, h3 {
   margin: 0 auto;
 }
 
-#submit-notice {
-  width: 250px;
-  text-align: center;
-  padding: 2px 5px;
-  background-color: #EE7171;
-  border-radius: 10px;
-}
-
-.attention {
-  text-decoration: underline;
-}
-
 .action {
   padding: 10px 0;
   border-top: 1px solid #EFEFEF;
+  margin-left: 110px;
 }
 
 input {
@@ -176,6 +165,12 @@ input {
 input:active {
   margin: 5px 0 0 0;
   box-shadow: inset -2px 2px 0 rgba(255, 255, 255, 0.2);
+}
+
+#current_value {
+  font-size: 45px;
+  font-weight: bold;
+  text-align: center;
 }
 
 #my-info {
