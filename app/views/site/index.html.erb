@@ -1,68 +1,37 @@
-<div id="wrapper">
-  <div id="header">
-    <h2>A concessionária quer pagar pouco, então:</h2><h1>Estou leiloando meu carro!</h1>
-  </div>
-  <div id="main-content">
-    <div id="inicial-info">
-      <p>Pela <a href="http://www.fipe.org.br/web/indices/veiculos/default.aspx?p=51" target="_blank">tabela fipe</a>, meu carro <a href="/assets/fipe.png" target="_blank">vale R$ 12.770,00</a>. Contudo, na troca por outro carro, a concessionária paga muito pouco (R$ 6.500,00).</p>
-
-      <p>Dessa forma, resolvi leiloar meu carro com o valor inicial de R$ 8.000,00. De qualquer forma vou vender o carro, então, o que vier é lucro! =)</p>
-    </div>
-
-    <% if flash[:notice] %>
-      <div class="notice"><%= flash[:notice] %></div>
-    <% end %>
-
-    <div id="photos-wrapper">
-      <ul id="photos">
-        <li><img src="/assets/photo1.jpg"></li>
-        <li><img src="/assets/photo2.jpg"></li>
-        <li><img src="/assets/photo3.jpg"></li>
-      </ul>
-    </div>
-    <div id="main-info">
-      <h3>Característica do carro:</h3>
-
-      <ul>
-        <li>Ford Escort GL 1.8, 16v, gasolina</li>
-        <li>Ano 2002</li>
-        <li>4 portas</li>
-        <li>Direção hidráulica</li>
-        <li>Ar condicionado</li>
-        <li>Kit gás (cilindros testados em 2012)</li>
-        <li>IPVA 2012 pago</li>
-      </ul>
-
-      <h3>Característica da negociação:</h3>
-
-      <ul>
-        <li>Pagamento a vista</li>
-        <li>Transferência do carro imediata</li>
-        <li>O valor de cada lance é de R$ 200,00</li>
-        <li>O leilão encerra no dia <strong>28/06/2012 às 23:59h</strong></li>
-      </ul>
-
-      <h3>Valor atual:</h3>
-      <p id="current_value">R$ <span id="value"><%= @value %></span></p>
-      <div class="action">
-        <p class="button">
-          <%= link_to "Dar lance!", "/auth/facebook" %>
-        </p>
-      </div>
-    </div>
-  </div>
+<div id="photos-wrapper">
+  <ul id="photos">
+    <li><img src="/assets/photo1.jpg"></li>
+    <li><img src="/assets/photo2.jpg"></li>
+    <li><img src="/assets/photo3.jpg"></li>
+  </ul>
 </div>
+<div id="main-info">
+  <h3>Característica do carro:</h3>
 
-<div id="footer-wrapper">
-  <div id="footer">
-    <h3>Quem sou eu:</h3>
-    <div id="my-info">
-      <img src="https://secure.gravatar.com/avatar/235c2eee6a3fd6bae5339a8941de07d2?s=140">
-      <p>Hugo Henriques Maia Vieira</p>
-      <p>(22) 8821-1528 (vivo)</p>
-      <p>
-        <a href="http://facebook.com/hugomaiavieira" target="_blank"><img src="/assets/facebook.png"></a>
-      </p>
-    </div>
+  <ul>
+    <li>Ford Escort GL 1.8, 16v, gasolina</li>
+    <li>Ano 2002</li>
+    <li>4 portas</li>
+    <li>Direção hidráulica</li>
+    <li>Ar condicionado</li>
+    <li>Kit gás (cilindros testados em 2012)</li>
+    <li>IPVA 2012 pago</li>
+  </ul>
+
+  <h3>Característica da negociação:</h3>
+
+  <ul>
+    <li>Pagamento a vista</li>
+    <li>Transferência do carro imediata</li>
+    <li>O valor de cada lance é de R$ 200,00</li>
+    <li>O leilão encerra no dia <strong>28/06/2012 às 23:59h</strong></li>
+  </ul>
+
+  <h3>Valor atual:</h3>
+  <p id="current_value">R$ <span id="value"><%= @value %></span></p>
+  <div class="action">
+    <p class="button">
+      <%= link_to "Dar lance!", "/auth/facebook" %>
+    </p>
   </div>
 </div>
