@@ -1,0 +1,18 @@
+<h1>Bids list</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Link</th>
+    <th>Date</th>
+  </tr>
+  <% @bids.each do |bid| %>
+    <tr>
+      <td>bid.user.name</td>
+      <td>bid.user.email</td>
+      <td>bid.user.link</td>
+      <td>bid.created_at</td>
+    </tr>
+  <% end %>
+</table>
