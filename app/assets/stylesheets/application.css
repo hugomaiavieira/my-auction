@@ -179,3 +179,14 @@ p.button:active a {
   float: left;
   margin-right: 20px;
 }
+
+.notice {
+  width: 600px;
+  margin: 0 0 20px 200px;
+  padding: 5px 10px;
+  border: 1px solid #0E610E;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #B8ECB8;
+  color: #0E610E;
+}
