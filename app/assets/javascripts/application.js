@@ -19,7 +19,7 @@ $(function () {
   $('#photos').bxSlider({
     auto: true,
     prevText: '',
-    nextText: ''
+    nextText: '',
     pause: 10000
   });
 });
