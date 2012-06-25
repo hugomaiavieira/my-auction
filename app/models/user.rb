@@ -5,10 +5,10 @@ class User < ActiveRecord::Base
 
   def self.create_from_omniauth(auth)
     create! do |user|
-      user.uid = ['uid']
-      user.name = ['info']['name']
-      user.email = ['info']['email']
-      user.link = ['info']['urls']['Facebook']
+      user.uid = auth'uid']
+      user.name = auth['info']['name']
+      user.email = auth['info']['email']
+      user.link = auth['info']['urls']['Facebook']
     end
   end
 end
