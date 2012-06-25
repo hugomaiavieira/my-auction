@@ -11,7 +11,7 @@
     <tr>
       <td><%= bid.user.name %></td>
       <td><%= bid.user.email %></td>
-      <td><%= bid.user.link %></td>
+      <td><%= link_to bid.user.link.split('/').last, bid.user.link, :target => '_blank' %></td>
       <td><%= bid.created_at %></td>
     </tr>
   <% end %>
