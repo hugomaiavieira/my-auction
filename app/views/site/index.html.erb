@@ -8,6 +8,11 @@
 
       <p>Dessa forma, resolvi leiloar meu carro com o valor inicial de R$ 8.000,00. De qualquer forma vou vender o carro, então, o que vier é lucro! =)</p>
     </div>
+
+    <% if flash[:notice] %>
+      <div class="notice"><%= flash[:notice] %></div>
+    <% end %>
+
     <div id="photos-wrapper">
       <ul id="photos">
         <li><img src="/assets/photo1.jpg"></li>
