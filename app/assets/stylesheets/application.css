@@ -145,25 +145,23 @@ h1, h2, h3 {
   margin-left: 110px;
 }
 
-input {
+p.button a {
   padding: 10px;
-  margin-bottom: 5px;
-  display: block;
-
-  cursor: pointer;
+  text-decoration: none;
   color: #fff;
   font-family: 'Cutive', serif;
   font-size: 20px;
-  font-weight: 400;
   text-align: center;
   border-radius: 5px;
-  border: 0;
   background: #065bad;
   box-shadow: inset -2px 2px 0 rgba(255, 255, 255, 0.2), 0 5px 0 #002243;
 }
 
-input:active {
-  margin: 5px 0 0 0;
+p.button:active {
+  padding-top: 5px;
+}
+
+p.button:active a {
   box-shadow: inset -2px 2px 0 rgba(255, 255, 255, 0.2);
 }
 
