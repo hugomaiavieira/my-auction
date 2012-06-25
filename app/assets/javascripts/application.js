@@ -20,6 +20,6 @@ $(function () {
     auto: true,
     prevText: '',
     nextText: ''
-    // pause: 15000
+    pause: 10000
   });
 });
