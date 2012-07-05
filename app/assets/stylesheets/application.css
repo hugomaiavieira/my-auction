@@ -70,6 +70,11 @@ h1, h2, h3 {
 
 /* Main content */
 
+.warning {
+  text-align: center;
+  background-color: #EC7B7B;
+}
+
 #main-content:after {
   content: ".";
   display: block;

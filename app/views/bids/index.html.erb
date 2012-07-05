@@ -1,18 +1,21 @@
-<h1>Bids list</h1>
+<h1>Lista de lances</h1>
+<p>Obs: Apenas o dono do carro teria acesso a essas informações.</p>
 
 <table>
   <tr>
-    <th>Name</th>
+    <th>Nome</th>
     <th>Email</th>
     <th>Link</th>
-    <th>Date</th>
+    <th>Data</th>
   </tr>
   <% @bids.each do |bid| %>
     <tr>
       <td><%= bid.user.name %></td>
-      <td><%= bid.user.email %></td>
+      <td><%= 'segredo@' + bid.user.email.split('@').last %></td>
       <td><%= link_to bid.user.link.split('/').last, bid.user.link, :target => '_blank' %></td>
       <td><%= bid.created_at %></td>
     </tr>
   <% end %>
 </table>
+
+<p><%= link_to 'Voltar', root_path %></p>
