@@ -1,7 +1,7 @@
 development:
   adapter: postgresql
   encoding: utf8
-  database: auction_development
+  database: my_auction_development
   pool: 5
   username: postgres
   password: postgres
@@ -10,7 +10,7 @@ development:
 test:
   adapter: postgresql
   encoding: utf8
-  database: auction_test
+  database: my_auction_test
   pool: 5
   username: postgres
   password: postgres
@@ -19,7 +19,7 @@ test:
 production:
   adapter: postgresql
   encoding: utf8
-  database: auction_production
+  database: my_auction_production
   pool: 5
   username: postgres
   password: postgres

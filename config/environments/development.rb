@@ -1,4 +1,4 @@
-Auction::Application.configure do
+MyAuction::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
   # In the development environment your application's code is reloaded on
@@ -20,4 +20,9 @@ Auction::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  # This is the credetials for a Facebook app create for development. You have
+  # to use the http://lvh.me:3000 to access the app on development environment
+  ENV['FACEBOOK_KEY'] = '160533994096249'
+  ENV['FACEBOOK_SECRET'] = '5c6c75fbecde82c3c5840477e745b7a8'
 end

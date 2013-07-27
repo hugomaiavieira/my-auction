@@ -1,6 +1,10 @@
-Auction::Application.routes.draw do
+MyAuction::Application.routes.draw do
   get 'admin', to: 'bids#index'
-  match 'auth/facebook/callback', via: [:get, :post], to: 'sessions#create'
-  match 'auth/failure', via: [:get, :post], to: redirect('/')
+
+  scope 'auth' do
+    get '/facebook/callback', to: 'sessions#create'
+    get '/failure', to: redirect('/')
+  end
+
   root to: 'site#index'
 end

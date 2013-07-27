@@ -1,6 +1,5 @@
 class SiteController < ApplicationController
   def index
-    value =  (8000 + (Bid.count * 200)).to_s
-    @value = "#{value[0..-4]}.#{value[-3..-1]},00"
+    @value = Auction.actual_value_as_currency
   end
 end

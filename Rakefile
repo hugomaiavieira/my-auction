@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Auction::Application.load_tasks
+MyAuction::Application.load_tasks
