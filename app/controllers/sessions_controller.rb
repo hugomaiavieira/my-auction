@@ -7,4 +7,8 @@ class SessionsController < ApplicationController
 
     redirect_to root_url, notice: "#{user.name}, obrigado pelo seu lance!"
   end
+
+  def oauth_failure
+    redirect_to root_url, alert: 'Não foi possível efetuar seu lance.'
+  end
 end
