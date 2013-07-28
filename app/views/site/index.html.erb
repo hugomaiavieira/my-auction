@@ -1,44 +1,47 @@
-<div id="photos-wrapper">
-  <ul id="photos">
-    <li><img src="/assets/photo1.jpg"></li>
-    <li><img src="/assets/photo2.jpg"></li>
-    <li><img src="/assets/photo3.jpg"></li>
-    <li><img src="/assets/photo4.jpg"></li>
-    <li><img src="/assets/photo5.jpg"></li>
-    <li><img src="/assets/photo6.jpg"></li>
-  </ul>
-</div>
-<div id="main-info">
-  <h3>Característica do carro:</h3>
+<div class="row">
+  <div class="span8">
+    <div id="photos-wrapper">
+      <ul id="photos">
+        <li><img src="/assets/photo1.jpg"></li>
+        <li><img src="/assets/photo2.jpg"></li>
+        <li><img src="/assets/photo3.jpg"></li>
+        <li><img src="/assets/photo4.jpg"></li>
+        <li><img src="/assets/photo5.jpg"></li>
+        <li><img src="/assets/photo6.jpg"></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Característica da negociação:</h3>
 
-  <ul>
-    <li>Ford Escort GL 1.8, 16v, gasolina</li>
-    <li>Ano 2002</li>
-    <li>4 portas</li>
-    <li>Direção hidráulica</li>
-    <li>Ar condicionado</li>
-    <li>Kit gás (cilindros testados em 2012)</li>
-    <li>IPVA 2012 pago</li>
-    <li>147.700 km rodados</li>
-    <li>4 pneus novos</li>
-  </ul>
+      <ul>
+        <li>Pagamento à vista</li>
+        <li>Valor inicial de <%= number_to_currency(Auction.initial_value) %></li>
+        <li>O valor de cada lance é de <%= number_to_currency(Bid.value) %></li>
+        <li>O leilão encerra no dia <strong>09/08/2013 às 23:59:59h</strong></li>
+      </ul>
 
-  <h3>Característica da negociação:</h3>
-
-  <ul>
-    <li>Pagamento a vista</li>
-    <li>Transferência imediata do carro</li>
-    <li>O valor de cada lance é de R$ 200,00</li>
-    <li>O leilão encerra no dia <strong>27/06/2012 às 23:59h</strong></li>
-  </ul>
-
-  <h3>Valor atual:</h3>
-  <p id="current_value">R$ <span id="value"><%= @value %></span></p>
-  <div class="warning"><p>Gostou da ideia? Dê um lance para testar! =)</p></div>
-  <div class="action">
-    <p class="button">
+      <h3>Valor atual:</h3>
+      <p><%= number_to_currency(Auction.current_value) %></p>
       <%= link_to "Dar lance!", "/auth/facebook" %>
-    </p>
+    </div>
   </div>
-  <center><p>Veja quem deu os lances <%= link_to 'aqui', admin_path %>.</p></center>
-</div>
+
+  <div class="span4">
+    <h3>Especificações técnicas:</h3>
+
+      <ul>
+        <li>Dell Inspiron 15R N5010</li>
+        <li>Processador Intel<sup>&reg</sup> Core<sup>&#8482</sup> i5-480M (2.66 GHz até 2.93 GHz com Intel<sup>&reg</sup> Turbo Boost, 4 Threads, 3Mb Cache)</li>
+        <li>4 GB de Memória RAM DDR3</li>
+        <li>Disco Rígido 320GB, SATA (5400 RPM)</li>
+        <li>Leitor e gravador de CD/DVD+/-RW</li>
+        <li>Tela LED HD de 15.6", Widescreen (1366x768)</li>
+        <li>Microfone e Webcam integrada de 1.3 Mpx</li>
+        <li>Saídas HDMI e VGA</li>
+        <li>4 portas USB, sendo uma delas eSATA</li>
+        <li>Leitor de cartão de memória</li>
+        <li>2.6 kg</li>
+        <li>Duas baterias, sendo uma <span class="label label-success">totalmente nova</span>!</li>
+      </ul>
+  </div><!--/span-->
+</div><!--/row-->

@@ -8,6 +8,8 @@ gem 'pg'
 gem 'thin'
 gem 'omniauth-facebook'
 gem 'jquery-rails'
+gem 'twitter-bootstrap-rails', '~> 2.2.7'
 
+gem 'less-rails'
 gem 'therubyracer', :platforms => :ruby
 gem 'uglifier', '>= 2.1.2'

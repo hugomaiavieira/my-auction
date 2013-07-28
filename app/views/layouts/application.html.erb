@@ -1,49 +1,41 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Estou leiloando meu carro!</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : 'Leilão do Hugo - Notebook Dell Inspiron 15R' %></title>
+    <%= csrf_meta_tags %>
 
-<div id="wrapper">
-  <div id="header">
-    <h2>A concessionária quer pagar pouco, então:</h2><h1>Estou leiloando meu carro!</h1>
-  </div>
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js" type="text/javascript"></script>
+    <![endif]-->
 
-  <div id="main-content">
-    <div class="warning"><p>Isso é um exemplo, não se trata de um leilão real!</p></div>
-    <div id="inicial-info">
-      <p>Pela <a href="http://www.fipe.org.br/web/indices/veiculos/default.aspx?p=51" target="_blank">tabela fipe</a>, meu carro <a href="/assets/fipe.png" target="_blank">vale R$ 12.770,00</a>. Contudo, na troca por outro carro, a concessionária paga muito pouco (R$ 6.500,00).</p>
+    <%= stylesheet_link_tag "application", :media => "all" %>
 
-      <p>Dessa forma, resolvi leiloar meu carro com o valor inicial de R$ 8.000,00. De qualquer forma vou vender o carro, então, o que vier é lucro! =)</p>
-    </div>
+    <%= favicon_link_tag '/favicon.ico', :rel => 'shortcut icon' %>
+  </head>
+  <body>
 
-    <% if flash[:notice] %>
-      <div class="notice"><%= flash[:notice] %></div>
-    <% end %>
+    <div class="container">
 
-    <%= yield %>
+      <div class="row">
+        <div class="span2"></div>
+        <div class="span8">
+          <%= bootstrap_flash %>
+        </div>
+        <div class="span2"></div>
+      </div>
 
-  </div>
-</div>
+      <%= yield %>
 
-<div id="footer-wrapper">
-  <div id="footer">
-    <h3>Quem sou eu:</h3>
-    <div id="my-info">
-      <img src="https://secure.gravatar.com/avatar/235c2eee6a3fd6bae5339a8941de07d2?s=140" class="my-photo" />
-      <p>Hugo Henriques Maia Vieira</p>
-      <p>(22) 8888-8888 (vivo)</p>
-      <p>
-        <a href="http://facebook.com/hugomaiavieira" target="_blank"><img src="/assets/facebook.png" /></a>
-      </p>
-      <p><strong>Estou a disposição para tirar qualquer dúvida e mostrar o carro.</strong></p>
-    </div>
-  </div>
-</div>
+      <footer>
+        <p>&copy; Company 2013</p>
+      </footer>
 
-</body>
+    </div> <!-- /container -->
+
+    <%= javascript_include_tag "application" %>
+
+  </body>
 </html>

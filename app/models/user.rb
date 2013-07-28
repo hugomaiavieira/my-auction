@@ -13,4 +13,8 @@ class User < ActiveRecord::Base
       user.link = auth['info']['urls']['Facebook']
     end
   end
+
+  def image
+    "https://graph.facebook.com/#{uid}/picture"
+  end
 end
