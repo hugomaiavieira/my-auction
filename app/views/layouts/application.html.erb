@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : 'Leilão do Hugo - Notebook Dell Inspiron 15R' %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Estou leiloando meu... #{Auction.product_name}" %></title>
     <%= csrf_meta_tags %>
 
     <!--[if lt IE 9]>
@@ -17,7 +17,12 @@
   </head>
   <body>
 
-    <div class="container">
+    <div id="marter-head">
+      <h2>Estou leiloando meu...</h2>
+      <h1><%= Auction.product_name %></h1>
+    </div>
+
+    <div class="container" id="content-wrapper">
 
       <div class="row">
         <div class="span2"></div>
@@ -29,11 +34,35 @@
 
       <%= yield %>
 
-      <footer>
-        <p>&copy; Company 2013</p>
-      </footer>
-
     </div> <!-- /container -->
+
+    <footer class="footer">
+      <div class="container">
+        <h3>Quem sou eu:</h3>
+
+        <div class="seller-info">
+          <img src="https://secure.gravatar.com/avatar/235c2eee6a3fd6bae5339a8941de07d2?s=100"
+            class="seller-image img-polaroid" height="100" width="100" />
+          <div class="seller-description">
+          <br />
+            <p>
+              Meu nome é Hugo Maia Vieira e você pode saber mais sobre mim através
+              das minhas redes sociais, onde também estou à disposição para tirar qualquer dúvida (que também pode ser enviada para o email <a href="mailto:hugomaiavieira@gmail.com">hugomaiavieira@gmail.com</a>).
+            </p>
+            <div class="seller-info-social">
+              <p>
+                <a href="http://facebook.com/hugomaiavieira"
+                  target="_blank"><%= image_tag 'facebook.png' %></a>
+              </p>
+              <p>
+                <a href="http://twitter.com/hugomaiavieira"
+                  target="_blank"><%= image_tag 'twitter.png' %></a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <%= javascript_include_tag "application" %>
 

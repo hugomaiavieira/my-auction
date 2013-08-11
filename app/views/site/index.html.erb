@@ -1,47 +1,49 @@
 <div class="row">
-  <div class="span8">
-    <div id="photos-wrapper">
-      <ul id="photos">
-        <li><img src="/assets/photo1.jpg"></li>
-        <li><img src="/assets/photo2.jpg"></li>
-        <li><img src="/assets/photo3.jpg"></li>
-        <li><img src="/assets/photo4.jpg"></li>
-        <li><img src="/assets/photo5.jpg"></li>
-        <li><img src="/assets/photo6.jpg"></li>
-      </ul>
-    </div>
-    <div>
-      <h3>Característica da negociação:</h3>
+  <div class="span6 offset1">
+    <%= render 'carousel' %>
+  </div>
+</div>
 
-      <ul>
-        <li>Pagamento à vista</li>
-        <li>Valor inicial de <%= number_to_currency(Auction.initial_value) %></li>
-        <li>O valor de cada lance é de <%= number_to_currency(Bid.value) %></li>
-        <li>O leilão encerra no dia <strong>09/08/2013 às 23:59:59h</strong></li>
-      </ul>
+<div class="row">
+<div class="span5 offset1">
+  <h3>Especificações técnicas:</h3>
 
-      <h3>Valor atual:</h3>
-      <p><%= number_to_currency(Auction.current_value) %></p>
-      <%= link_to "Dar lance!", "/auth/facebook" %>
+  <ul>
+    <li>Dell Inspiron 15R N5010</li>
+    <li>Processador Intel Core i5-480M (2.66 GHz até 2.93 GHz com Intel
+        Turbo Boost, 4 Threads, 3Mb Cache)</li>
+    <li>4 GB de Memória RAM DDR3</li>
+    <li>Disco Rígido 320GB, SATA (5400 RPM)</li>
+    <li>Leitor e gravador de CD/DVD+/-RW</li>
+    <li>Tela LED HD de 15.6", Widescreen (1366x768)</li>
+    <li>Microfone e Webcam integrada de 1.3 Mpx</li>
+    <li>Saídas HDMI e VGA</li>
+    <li>4 portas USB, sendo uma delas eSATA</li>
+    <li>Leitor de cartão de memória</li>
+    <li>2.6 kg</li>
+    <li>Duas baterias, sendo uma <span class="label label-success">totalmente nova</span>!</li>
+  </ul>
+</div>
+
+  <div class="span5 offset1">
+    <h3>Característica da negociação:</h3>
+
+    <ul>
+      <li>Pagamento à vista</li>
+      <li>Valor inicial de <%= number_to_currency(Auction.initial_value) %></li>
+      <li>O valor de cada lance é de <%= number_to_currency(Bid.value) %></li>
+      <li>O leilão encerra no dia <strong>09/08/2013 às 23:59:59h</strong></li>
+    </ul>
+
+
+    <div class="bid-wrapper">
+      <h3>
+        Valor atual:
+        <span class="product-value">
+          <%= number_to_currency(Auction.current_value) %>
+        </span>
+      </h3>
+      <%= link_to "Dar lance!", "/auth/facebook", class: 'btn btn-primary btn-large' %>
     </div>
   </div>
-
-  <div class="span4">
-    <h3>Especificações técnicas:</h3>
-
-      <ul>
-        <li>Dell Inspiron 15R N5010</li>
-        <li>Processador Intel<sup>&reg</sup> Core<sup>&#8482</sup> i5-480M (2.66 GHz até 2.93 GHz com Intel<sup>&reg</sup> Turbo Boost, 4 Threads, 3Mb Cache)</li>
-        <li>4 GB de Memória RAM DDR3</li>
-        <li>Disco Rígido 320GB, SATA (5400 RPM)</li>
-        <li>Leitor e gravador de CD/DVD+/-RW</li>
-        <li>Tela LED HD de 15.6", Widescreen (1366x768)</li>
-        <li>Microfone e Webcam integrada de 1.3 Mpx</li>
-        <li>Saídas HDMI e VGA</li>
-        <li>4 portas USB, sendo uma delas eSATA</li>
-        <li>Leitor de cartão de memória</li>
-        <li>2.6 kg</li>
-        <li>Duas baterias, sendo uma <span class="label label-success">totalmente nova</span>!</li>
-      </ul>
-  </div><!--/span-->
-</div><!--/row-->
+</div>

@@ -15,12 +15,7 @@
 //= require twitter/bootstrap
 //= require_tree .
 
-
-$(function () {
-  $('#photos').bxSlider({
-    auto: true,
-    prevText: '',
-    nextText: '',
-    pause: 10000
-  });
-});
+$('.carousel').carousel({
+    interval: 4000,
+    pause: 'hover'
+})

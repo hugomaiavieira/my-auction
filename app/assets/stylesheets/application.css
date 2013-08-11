@@ -11,3 +11,66 @@
  *= require_self
  *= require_tree .
  */
+
+#marter-head {
+  border-top: 4px solid #227fbb;
+  color: #2c3e50;
+  padding: 40px 0;
+  text-align: center;
+}
+
+#marter-head h1 {
+  font-size: 70px;
+  line-height: 75px;
+}
+
+#marter-head h2 {
+  color: #5c6d7e;
+}
+
+#content-wrapper {
+  border-top: 1px solid #F1F1F1;
+  border-right: 1px solid #E7E6E6;
+  border-left: 1px solid #E7E6E6;
+  background: white;
+  padding-bottom: 30px;
+  border-radius: 6px;
+  border-bottom: 1px solid #CFCFCF;
+
+  padding-top: 30px;
+}
+
+.footer {
+  padding: 20px 0;
+  margin-top: 70px;
+  border-top: 1px solid #e5e5e5;
+  background: #bdc3c7;
+}
+
+.bid-wrapper {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.product-value {
+  color: #27ae60;
+}
+
+.footer .seller-info {
+  margin-left: 15px;
+}
+
+.footer .seller-image {
+  text-align: center;
+  float: left;
+  margin-right: 20px;
+}
+
+.footer .seller-description {
+  margin-top: 10px;
+}
+
+.footer .seller-info-social p {
+  float: left;
+  margin-right: 10px;
+}
