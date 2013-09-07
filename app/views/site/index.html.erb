@@ -1,8 +1,8 @@
-<div class="row">
-  <div class="span6 offset1">
+<div class="row-fluid">
+  <div class="span10 offset1">
     <%= render 'carousel' %>
   </div>
-</div>
+  </div>
 
 <div class="row">
 <div class="span5 offset1">
@@ -10,8 +10,7 @@
 
   <ul>
     <li>Dell Inspiron 15R N5010</li>
-    <li>Processador Intel Core i5-480M (2.66 GHz até 2.93 GHz com Intel
-        Turbo Boost, 4 Threads, 3Mb Cache)</li>
+    <li>Processador Intel Core i5-480M (2.66 GHz até 2.93 GHz com Intel Turbo Boost, 4 Threads, 3Mb Cache)</li>
     <li>4 GB de Memória RAM DDR3</li>
     <li>Disco Rígido 320GB, SATA (5400 RPM)</li>
     <li>Leitor e gravador de CD/DVD+/-RW</li>
@@ -25,11 +24,17 @@
   </ul>
 </div>
 
-  <div class="span5 offset1">
+  <div class="span5">
+    <h3>Formas de pagamento:</h3>
+
+    <ul>
+      <li>À vista, por depósito bancário <span class="label label-success">(5% de desconto)</span></li>
+      <li>Cartão de crédito em até 18x, através do PagSeguro <a href="http://goo.gl/MMk77" target="_blank">(calcular o valor das parcelas)</a></li>
+    </ul>
+
     <h3>Característica da negociação:</h3>
 
     <ul>
-      <li>Pagamento à vista</li>
       <li>Valor inicial de <%= number_to_currency(Auction.initial_value) %></li>
       <li>O valor de cada lance é de <%= number_to_currency(Bid.value) %></li>
       <li>O leilão encerra no dia <strong>09/08/2013 às 23:59:59h</strong></li>

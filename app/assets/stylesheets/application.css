@@ -28,16 +28,18 @@
   color: #5c6d7e;
 }
 
+.content {
+  padding: 0 50px;
+}
+
 #content-wrapper {
   border-top: 1px solid #F1F1F1;
   border-right: 1px solid #E7E6E6;
   border-left: 1px solid #E7E6E6;
   background: white;
-  padding-bottom: 30px;
+  padding: 30px 0;
   border-radius: 6px;
   border-bottom: 1px solid #CFCFCF;
-
-  padding-top: 30px;
 }
 
 .footer {

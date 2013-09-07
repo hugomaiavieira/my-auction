@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Estou leiloando meu... #{Auction.product_name}" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Estou leiloando... #{Auction.product_name}" %></title>
     <%= csrf_meta_tags %>
 
     <!--[if lt IE 9]>
@@ -18,22 +18,23 @@
   <body>
 
     <div id="marter-head">
-      <h2>Estou leiloando meu...</h2>
+      <h2>Estou leiloando...</h2>
       <h1><%= Auction.product_name %></h1>
     </div>
 
-    <div class="container" id="content-wrapper">
-
-      <div class="row">
-        <div class="span2"></div>
-        <div class="span8">
-          <%= bootstrap_flash %>
+    <div class="container">
+      <div id="content-wrapper">
+        <div class="row">
+          <div class="span2"></div>
+          <div class="span8">
+            <%= bootstrap_flash %>
+          </div>
+          <div class="span2"></div>
         </div>
-        <div class="span2"></div>
-      </div>
 
-      <%= yield %>
+        <%= yield %>
 
+      </div> <!-- /container-wrapper -->
     </div> <!-- /container -->
 
     <footer class="footer">

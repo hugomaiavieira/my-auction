@@ -1,34 +1,36 @@
-<div class="row">
-  <div class="page-header">
-    <h1><%=t '.title', default: Bid.model_name.human.pluralize.titleize %></h1>
-  </div>
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Email</th>
-        <th><%= Bid.human_attribute_name(:created_at) %></th>
-        <th><%=t '.actions', default: t("helpers.actions") %></th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @bids.each do |bid| %>
+<div class="content">
+  <div class="row-fluid">
+    <div class="page-header">
+      <h1><%=t '.title', default: Bid.model_name.human.pluralize.titleize %></h1>
+    </div>
+    <table class="table table-striped">
+      <thead>
         <tr>
-          <td>
-            <%= image_tag bid.user.image, size: '22x22' %>
-            <%= link_to bid.user.name, bid.user.link, target: '_blank' %>
-          </td>
-          <td><%= bid.user.email %></td>
-          <td><%=l bid.created_at %></td>
-          <td>
-            <%= link_to t('.destroy', default: t("helpers.links.destroy")),
-                        bid_path(bid),
-                        method: :delete,
-                        data: { confirm: t('.confirm', default: t("helpers.links.confirm", default: 'Are you sure?')) },
-                        class: 'btn btn-mini btn-danger' %>
-          </td>
+          <th>Name</th>
+          <th>Email</th>
+          <th><%= Bid.human_attribute_name(:created_at) %></th>
+          <th><%=t '.actions', default: t("helpers.actions") %></th>
         </tr>
-      <% end %>
-    </tbody>
-  </table>
-</div><!--/row-->
+      </thead>
+      <tbody>
+        <% @bids.each do |bid| %>
+          <tr>
+            <td>
+              <%= image_tag bid.user.image, size: '22x22' %>
+              <%= link_to bid.user.name, bid.user.link, target: '_blank' %>
+            </td>
+            <td><%= bid.user.email %></td>
+            <td><%=l bid.created_at %></td>
+            <td>
+              <%= link_to t('.destroy', default: t("helpers.links.destroy")),
+                          bid_path(bid),
+                          method: :delete,
+                          data: { confirm: t('.confirm', default: t("helpers.links.confirm", default: 'Are you sure?')) },
+                          class: 'btn btn-mini btn-danger' %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div><!--/row-->
+</div>
