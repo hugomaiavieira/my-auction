@@ -13,3 +13,6 @@ gem 'twitter-bootstrap-rails', '~> 2.2.7'
 gem 'less-rails'
 gem 'therubyracer', :platforms => :ruby
 gem 'uglifier', '>= 2.1.2'
+
+# for heroku deploy
+gem 'rails_12factor'

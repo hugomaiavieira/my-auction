@@ -11,6 +11,15 @@
       <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js" type="text/javascript"></script>
     <![endif]-->
 
+    <!-- start: Facebook Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="fb:app_id" content="255940757884214" />
+    <meta property="og:title" content="Estou leiloando... <%= Auction.product_name %>"/>
+    <meta property="og:site_name" content="leilao.hugomaiavieira.com"/>
+    <meta property="og:image" content="http://leilao.hugomaiavieira.com/assets/product/facebook-share.jpg"/>
+    <meta property="og:description" content="<%= Auction.description %>." />
+    <!-- end: Facebook Open Graph -->
+
     <%= stylesheet_link_tag "application", :media => "all" %>
 
     <%= favicon_link_tag '/favicon.ico', :rel => 'shortcut icon' %>
