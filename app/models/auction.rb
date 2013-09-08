@@ -11,7 +11,7 @@ class Auction
 
 
   def self.initial_value
-    1300
+    1200
   end
 
   def self.current_value
