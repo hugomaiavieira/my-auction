@@ -24,6 +24,18 @@ admin area with the user "admin". On heroku:
 $ heroku config:set ADMIN_PASSWORD=R2XcH4PYkC
 ```
 
+### Google Analytics
+
+If you want to track your site with Google Analytics on production, you have to
+set the environment variables `ENV['ANALYTICS_ID']` and
+`ENV['ANALYTICS_DOMAIN']`. On heroku:
+
+
+``` bash
+$ heroku config:set ANALYTICS_ID='UA-43820486-7'
+$ heroku config:set ANALYTICS_DOMAIN='hugomaiavieira.com'
+```
+
 ## Development
 
 I've create a Facebook app for development and set the Facebook environments
