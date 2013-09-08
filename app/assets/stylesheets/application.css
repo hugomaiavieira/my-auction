@@ -42,9 +42,16 @@
   border-bottom: 1px solid #CFCFCF;
 }
 
+.fb-comments-wrapper {
+  margin-top: 30px;
+}
+
+/* to make facebook comments iframe responsive. http://stackoverflow.com/a/7792873/529418 */
+.fb-comments, .fb-comments > span[style], .fb_iframe_widget iframe[style] { width: 100% !important; }
+
 .footer {
   padding: 20px 0;
-  margin-top: 70px;
+  margin-top: 30px;
   border-top: 1px solid #e5e5e5;
   background: #bdc3c7;
 }
